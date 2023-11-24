@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { Icon } from "../../../../../components/icon/Icon"
 import { FlexWrapper } from "../../../../../components/FlexWrapper";
+import { theme } from "../../../../../styles/Theme";
 
 
 type SkillPropsType = {
@@ -10,25 +11,37 @@ type SkillPropsType = {
 
 export const Skill = (props: SkillPropsType) => {
     return (
-        
+
         <StyledSkill>
-            <FlexWrapper direction={"column"} align={"center"}>
-            <Icon iconId={props.iconId} width="114" height="96" viewBox="0 0 50 50" />
+        <FlexWrapper direction={"column"} align={"center"}>
+            <IconContainer>
+                <Icon iconId={props.iconId} width="114" height="96" viewBox="0 0 50 50" />
+
+            </IconContainer>
             <IconName>
                 {props.iconName}
             </IconName>
-            </FlexWrapper>
-        </StyledSkill>
+        </FlexWrapper>
+        </StyledSkill >
     )
 }
 
 
 
 const StyledSkill = styled.div`
-    background-color: #ffb846;
-    padding: 20px;
-    margin: 20px;
+    background-color: ${theme.colors.primaryBg};
+    width: 270px;
+    height: 270px;
+    border-radius: 29px;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.47);
+    margin: 70px 0;
 `
-const IconName = styled.h3`
 
+const IconContainer = styled.div`
+    margin-top: 56px;
+    margin-bottom: 50px;
+`
+
+const IconName = styled.h3`
+    font: ${theme.fonts.skillTag}
 `

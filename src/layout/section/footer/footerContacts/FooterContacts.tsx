@@ -28,10 +28,3 @@ export const FooterContacts = (props: FooterContactsPropsType) => {
     );
 }
 
-
-const FooterContactsStyled = styled.div`
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-`
