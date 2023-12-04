@@ -1,15 +1,20 @@
 import { Skills } from "./skills/Skills";
 import { About } from "./about/About";
 import { Container } from "../../../components/Container";
+import styled from "styled-components";
 
 export const Desc = () => {
     return (
-        <section>
+        <DescSection>
             <Container>
                 <Skills />
                 <About />
             </Container>
-        </section>
+        </DescSection>
     );
 };
 
+const DescSection = styled.section`
+    padding-top: 69px;
+    padding-bottom: 138px;
+`

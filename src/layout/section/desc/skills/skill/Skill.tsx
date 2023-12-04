@@ -34,12 +34,11 @@ const StyledSkill = styled.div`
     height: 270px;
     border-radius: 29px;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.47);
-    margin: 70px 0;
 `
 
 const IconContainer = styled.div`
-    margin-top: 56px;
-    margin-bottom: 50px;
+    padding-top: 56px;
+    padding-bottom: 50px;
 `
 
 const IconName = styled.h3`
