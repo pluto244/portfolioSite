@@ -3,6 +3,7 @@ import { SlideShow } from './slideShow/SlideShow';
 import proj1 from '../../../accerts/images/proj1.png'
 import styled from 'styled-components';
 import { Container } from '../../../components/Container';
+import { theme } from '../../../styles/Theme';
 const projects = [
     {
         name: 'Landing Ice-cream',
@@ -29,7 +30,7 @@ export const Portfolio = () => {
     return (
         <PortfolioStyled>
             <Container>
-            <h2>Portfolio</h2>
+            <TitleStyle>Portfolio</TitleStyle>
                 <SlideShow projects={projects} />
             </Container>
         </PortfolioStyled>
@@ -37,6 +38,13 @@ export const Portfolio = () => {
 };
 
 const PortfolioStyled = styled.section`
-    padding: 50px;
-    padding-top: 80px;
+    padding: 60px 0 116px;
+    height: 100%;
+`
+
+const TitleStyle = styled.h2`
+    font: ${theme.fonts.h2};
+    color: ${theme.colors.descFont};
+    margin-bottom: 64px;
+    text-align: center;
 `
