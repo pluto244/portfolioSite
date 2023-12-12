@@ -1,12 +1,21 @@
-import { Slide } from 'react-slideshow-image';
+import React, { useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+
+
 import styled from 'styled-components';
-import 'react-slideshow-image/dist/styles.css'
-import { Icon } from '../../../../components/icon/Icon';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
+import { Keyboard, Pagination, Navigation } from 'swiper/modules';
+import { theme } from '../../../../styles/Theme';
 
 
 type SlideShowTypeProps = {
-    images: Array<{
+    projects: Array<{
         name: string;
         url: string;
         description: string;
@@ -16,49 +25,49 @@ type SlideShowTypeProps = {
 export const SlideShow = (props: SlideShowTypeProps) => {
 
     return (
-        
-        <Slide {...properties}>
+        <Swiper slidesPerView={1}
+            spaceBetween={30}
+
+            keyboard={{
+                enabled: true,
+            }}
+            pagination={{
+                clickable: true,
+
+            }}
+            navigation={true}
+            modules={[Keyboard, Pagination, Navigation]}
             
-            {props.images.map((Image, index) => {
-                return (
-                    <SlideEffect key={index}>
-                        <FlexWrapper align={"center"} justify={"space-around"}>
-                            <div>
-                                <StyledImage src={Image.url}/>
-                            </div>
-                            <FlexWrapper direction={"column"} justify={"center"}>
-                                <h3>{Image.name}</h3>
-                                <p>{Image.description}</p>
-                                <span>More</span>
-                            </FlexWrapper>
-                        </FlexWrapper>
-                    </SlideEffect>
-                )
-            })}
-        </Slide>
+        >
+
+{
+    props.projects.map((Project, index) => {
+        return (
+            <SwiperSlide >
+                <SlideContainer>
+                    <StyledProject src={Project.url} />
+                    <ProjectDescription>
+                        <StyledH3>{Project.name}</StyledH3>
+                        <StyledParagrath>{Project.description}</StyledParagrath>
+                        <StyledMore>More</StyledMore>
+                    </ProjectDescription>
+                </SlideContainer>
+            </SwiperSlide>
+        )
+    })
+}
+        </Swiper >
     );
 };
 
-const StyledImage = styled.img`
+const StyledProject = styled.img`
     border-radius: 29px;
-    width: 493px;
-    height: 500px;
+    max-width: 493px;
+    min-height: 500px;
     object-fit: cover;
+    margin-left: 20px;
 `
 
-const SlideEffect = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 600px;
-    max-width: 970px;
-    border-radius: 29px;
-    border-style: solid;
-    border-color: transparent;
-    border-width: 1px;
-    background-color: gray;
-    
-`
 const ButtonStyle = styled.button`
     box-sizing: border-box;
     background: linear-gradient(87.32deg, rgba(0, 196, 240, 1.00) 0%,rgba(226, 149, 0, 1.00) 100%);
@@ -68,8 +77,39 @@ const ButtonStyle = styled.button`
     align-items: center;
 `
 
-const properties = {
-    prevArrow: <ButtonStyle><Icon iconId='arrowLeft' width="36" height="36" viewBox="0 0 36 36" /></ButtonStyle>,
-    nextArrow: <ButtonStyle><Icon iconId='arrowRight' width="36" height="36" viewBox="0 0 36 36" /></ButtonStyle>
-}
+const SlideContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 600px;
+    max-width: 970px;
+    margin: auto;
+    border-radius: 29px;
+    background: linear-gradient(130.68deg, rgba(65, 65, 65, 1.00) 0%,rgba(45, 45, 45, 1.00) 100%);
+    box-shadow: 0px 4px 15px 0px rgba(27, 27, 27, 0.28);
 
+`
+const ProjectDescription = styled.div`
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    min-height:436px;
+    max-width: 296px;
+    height: 100%;
+    margin: 2%;
+`
+
+const StyledH3 = styled.h3`
+    font: ${theme.fonts.skillTag};
+    margin-bottom: 10px;
+`
+const StyledParagrath = styled.p`
+    font: ${theme.fonts.p};
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+`
+const StyledMore = styled.span`
+    color: ${theme.colors.accent}
+`

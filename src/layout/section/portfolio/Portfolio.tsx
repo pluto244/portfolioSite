@@ -3,9 +3,9 @@ import { SlideShow } from './slideShow/SlideShow';
 import proj1 from '../../../accerts/images/proj1.png'
 import styled from 'styled-components';
 import { Container } from '../../../components/Container';
-const images = [
+const projects = [
     {
-        name: '1',
+        name: 'Landing Ice-cream',
         url: proj1,
         description: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut orci eu elit consequat posuere ut sed elit. Nulla et tristique felis. Morbi quis orci non purus blandit fringilla. Etiam et mollis eros. Duis venenatis vulputate lacus, non tristique eros placerat vel. Nam nec magna lacus. Etiam euismod egestas mauris nec mollis. Phasellus efficitur et ex vel condimentum. Cras enim purus, tempor sed massa vel, accumsan bibendum magna. Nullam hendrerit cursus purus, sit amet viverra arcu gravida vel.",
 
@@ -30,12 +30,13 @@ export const Portfolio = () => {
         <PortfolioStyled>
             <Container>
             <h2>Portfolio</h2>
-                <SlideShow images={images} />
+                <SlideShow projects={projects} />
             </Container>
         </PortfolioStyled>
     );
 };
 
 const PortfolioStyled = styled.section`
-
+    padding: 50px;
+    padding-top: 80px;
 `
