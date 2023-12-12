@@ -27,7 +27,7 @@ export const Menu = (props : MenuPropsType) => {
 const StyledMenu = styled.nav<StyledMenuPropsType>`
     ul {
         display: flex;
-        gap: 20px;
+        gap: 18px;
         list-style-type: none;
         flex-direction: ${props => props.direction || "row"};
     }

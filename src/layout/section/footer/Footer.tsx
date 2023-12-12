@@ -31,14 +31,14 @@ export const Footer = () => {
     return (
         <StyledFooterSection>
             <Container>
-                <FlexWrapper align="center"  justify="space-evenly">
+                <FooterWrapper>
                     <Menu menuDirection={"column"} menuItems={items} />
                     <FooterContacts contacts={contacts} />
                     <FlexWrapper direction="column" justify="space-between">
                         <Logo />
                         <small>Copyright © 2023, Pluto</small>
                     </FlexWrapper>
-                </FlexWrapper>
+                </FooterWrapper>
             </Container>
         </StyledFooterSection>
     );
@@ -46,4 +46,12 @@ export const Footer = () => {
 
 const StyledFooterSection = styled.footer`
     background-color: ${theme.colors.secondaryBg};
+    min-height: 221px;
+    padding: 40px;
+`
+
+const FooterWrapper = styled.div`
+    height: 130px;
+    display: flex;
+    justify-content: space-around;
 `
