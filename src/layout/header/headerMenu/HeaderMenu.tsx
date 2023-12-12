@@ -2,19 +2,19 @@ import styled from "styled-components"
 import { theme } from "../../../styles/Theme";
 
 type MenuPropsType = {
-    menuItems:Array<string>;
+    menuItems: Array<string>;
     menuDirection?: string;
 };
 
-export const HeaderMenu = (props : MenuPropsType) => {
+export const HeaderMenu = (props: MenuPropsType) => {
     return (
         <StyledHeaderMenu>
             <List>
-                {props.menuItems.map((item, index)=>{
+                {props.menuItems.map((item, index) => {
                     return (
-                        <Links key = {index}>
-                        <Link href="">{item}</Link>
-                    </Links>
+                        <Links key={index}>
+                            <Link href="">{item}</Link>
+                        </Links>
                     )
                 })}
             </List>

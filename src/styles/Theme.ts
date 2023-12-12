@@ -1,5 +1,5 @@
 export const theme = {
-    colors:{
+    colors: {
         primaryBg: "#2C2C2C",
         secondaryBg: "#414141",
         accent: "#00C4F0",
@@ -12,7 +12,7 @@ export const theme = {
         mainFont: "#FFFFFF",
         descFont: "#E4E4E4",
     },
-    fonts:{
+    fonts: {
         h1: "700 48px 'Montserrat-Bold', sans-serif",
         name: "700 72px 'Montserrat-Bold', sans-serif",
         p: "300 20px/24px sans-serif",

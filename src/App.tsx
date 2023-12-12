@@ -8,11 +8,11 @@ import { Footer } from './layout/section/footer/Footer';
 function App() {
     return (
         <div>
-            <Header/>
-            <Main/>
-            <Desc/>
-            <Portfolio/>
-            <Footer/>
+            <Header />
+            <Main />
+            <Desc />
+            <Portfolio />
+            <Footer />
         </div>
     );
 }

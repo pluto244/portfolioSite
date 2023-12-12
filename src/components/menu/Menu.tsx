@@ -4,19 +4,19 @@ type StyledMenuPropsType = {
     direction?: string
 }
 type MenuPropsType = {
-    menuItems:Array<string>;
+    menuItems: Array<string>;
     menuDirection?: string;
 };
 
-export const Menu = (props : MenuPropsType) => {
+export const Menu = (props: MenuPropsType) => {
     return (
         <StyledMenu direction={props.menuDirection}>
             <ul>
-                {props.menuItems.map((item, index)=>{
+                {props.menuItems.map((item, index) => {
                     return (
-                        <li key = {index}>
-                        <a href="">{item}</a>
-                    </li>
+                        <li key={index}>
+                            <a href="">{item}</a>
+                        </li>
                     )
                 })}
             </ul>

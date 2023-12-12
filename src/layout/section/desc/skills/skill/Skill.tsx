@@ -13,15 +13,15 @@ export const Skill = (props: SkillPropsType) => {
     return (
 
         <StyledSkill>
-        <FlexWrapper direction={"column"} align={"center"}>
-            <IconContainer>
-                <Icon iconId={props.iconId} width="114" height="96" viewBox="0 0 50 50" />
+            <FlexWrapper direction={"column"} align={"center"}>
+                <IconContainer>
+                    <Icon iconId={props.iconId} width="114" height="96" viewBox="0 0 50 50" />
 
-            </IconContainer>
-            <IconName>
-                {props.iconName}
-            </IconName>
-        </FlexWrapper>
+                </IconContainer>
+                <IconName>
+                    {props.iconName}
+                </IconName>
+            </FlexWrapper>
         </StyledSkill >
     )
 }
