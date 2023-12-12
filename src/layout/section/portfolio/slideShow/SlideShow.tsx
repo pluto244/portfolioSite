@@ -1,4 +1,3 @@
-import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -9,7 +8,6 @@ import 'swiper/css/navigation';
 
 
 import styled from 'styled-components';
-import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { Keyboard, Pagination, Navigation } from 'swiper/modules';
 import { theme } from '../../../../styles/Theme';
 
@@ -43,7 +41,7 @@ export const SlideShow = (props: SlideShowTypeProps) => {
 {
     props.projects.map((Project, index) => {
         return (
-            <SwiperSlide >
+            <SwiperSlide key={index}>
                 <SlideContainer>
                     <StyledProject src={Project.url} />
                     <ProjectDescription>
