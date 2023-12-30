@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 import styled from 'styled-components';
 import { Keyboard, Pagination, Navigation } from 'swiper/modules';
 import { theme } from '../../../../styles/Theme';
+import { font } from '../../../../styles/Common';
 
 
 type SlideShowTypeProps = {
@@ -99,11 +100,12 @@ const ProjectDescription = styled.div`
 `
 
 const StyledH3 = styled.h3`
-    font: ${theme.fonts.skillTag};
+    ${font({weight: theme.fonts.skillTag.weight, Fmax: theme.fonts.skillTag.size})};
     margin-bottom: 10px;
 `
 const StyledParagrath = styled.p`
-    font: ${theme.fonts.p};
+    ${font({weight: theme.fonts.p.weight, Fmax: theme.fonts.p.size})};
+
     position: relative;
     text-align: center;
     margin-bottom: 10px;

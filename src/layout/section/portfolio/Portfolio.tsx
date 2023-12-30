@@ -4,6 +4,7 @@ import proj1 from '../../../accerts/images/proj1.png'
 import styled from 'styled-components';
 import { Container } from '../../../components/Container';
 import { theme } from '../../../styles/Theme';
+import { font } from '../../../styles/Common';
 const projects = [
     {
         name: 'Landing Ice-cream',
@@ -43,7 +44,7 @@ const PortfolioStyled = styled.section`
 `
 
 const TitleStyle = styled.h2`
-    font: ${theme.fonts.h2};
+    ${font({weight: theme.fonts.h2.weight, Fmax: theme.fonts.h2.size})};
     color: ${theme.colors.descFont};
     margin-bottom: 64px;
     text-align: center;

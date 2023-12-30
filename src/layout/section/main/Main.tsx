@@ -4,13 +4,16 @@ import { PhotoSection } from "./photoSection/PhotoSection"
 import { DescriptionSection } from "./descriptionSection/DescriptionSection"
 import styled from "styled-components"
 import { Container } from "../../../components/Container"
+import { theme } from "../../../styles/Theme"
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align="center" justify="space-around">
+                <FlexWrapper align="center" justify="space-around" wrap="wrap">
                     <DescriptionSection />
-                    <PhotoSection />
+                    <PhotoContainer>
+                        <PhotoSection />
+                    </PhotoContainer>
                 </FlexWrapper >
             </Container>
             
@@ -19,7 +22,11 @@ export const Main = () => {
 }
 
 const StyledMain = styled.section`
-    padding: 50px;
-    padding-top: 80px;
+    padding-top: 50px;
 `
 
+const PhotoContainer = styled.div`
+    @media ${theme.media.tablet}{
+        display: none;
+    }
+`

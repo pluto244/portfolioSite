@@ -4,6 +4,7 @@ import meBlackNWhite from "../../../../accerts/images/meBlackNWhite.png";
 import meMajor from "../../../../accerts/images/meMajor.png";
 import styled from "styled-components";
 import { theme } from "../../../../styles/Theme";
+import { font } from "../../../../styles/Common";
 
 export const About = () => {
     return (
@@ -64,6 +65,9 @@ const AboutImg = styled.img`
     object-fit: cover;
     box-shadow: 0px 0px 0px 6px ${theme.colors.secondaryBg};  
 `
+const TitleStyle = styled.h2`
+    ${font({weight: theme.fonts.h2.weight, Fmax: theme.fonts.h2.size})};
+`
 const TextContainer = styled.div`
     background: #2c2c2c;
     border-radius: 14px;
@@ -75,11 +79,7 @@ const TextContainer = styled.div`
 `
 const Text = styled.p`
     margin: 62px;
-    font: ${theme.fonts.p};
-    color: ${theme.colors.descFont}
+    ${font({weight: theme.fonts.p.weight, Fmax: theme.fonts.p.size})};
+
 `
 
-const TitleStyle = styled.h2`
-    font: ${theme.fonts.h2};
-    color: ${theme.colors.descFont};
-`

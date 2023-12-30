@@ -6,7 +6,7 @@ import { Icons } from "./Icons";
 
 export const PhotoSection = () => {
     return (
-        <FlexWrapper align={"center"}>
+    <FlexWrapper align={"center"}>
         <Icons/>
         <PhotoWrapper>
             <Photo src={myPhoto} />

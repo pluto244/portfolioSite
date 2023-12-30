@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { theme } from "../../../styles/Theme";
+import { font} from "../../../styles/Common";
 
 type MenuPropsType = {
     menuItems: Array<string>;
@@ -37,8 +38,11 @@ const List = styled.ul`
 `
 
 const Links = styled.li`
+
     position: relative;
-    font:  18px;
+
+    ${font({family: theme.fonts.navLinks.family, weight: theme.fonts.navLinks.weight, Fmax: theme.fonts.navLinks.size})};
+
     &::before{
         content: "";
         display: inline-block;

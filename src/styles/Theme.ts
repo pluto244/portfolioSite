@@ -13,12 +13,38 @@ export const theme = {
         descFont: "#E4E4E4",
     },
     fonts: {
-        h1: "700 48px 'Montserrat-Bold', sans-serif",
-        name: "700 72px 'Montserrat-Bold', sans-serif",
-        p: "300 20px/24px sans-serif",
-        button: "400 18px sans-serif",
-        skillTag: "300 24px sans-serif",
-        h2: "400 48px 'Montserrat', sans-serif",
+        navLinks:{
+            family: "'Montserrat', sans-serif",
+            size: 18,
+            weight: 300,
+        },
+        h1 :{
+            size: 48,
+            weight: 700,
+        },
+        name: {
+            size: 72,
+            weight: 700,
+        },
+        p: {
+            size: 20,
+            weight: 300,
+            height: 1.4,
+        },
+        button: {
+            size: 18,
+            weight: 700,
+        },
+        
+        skillTag: {
+            size: 24,
+            weight: 300,
+        },
+        h2: {
+            size: 48,
+            weight: 400,
+        },
+
     },
     media:{
         tablet: "screen and (max-width: 768px)",

@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { Icon } from "../../../../../components/icon/Icon"
 import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { theme } from "../../../../../styles/Theme";
+import { font } from "../../../../../styles/Common";
 
 
 type SkillPropsType = {
@@ -42,5 +43,6 @@ const IconContainer = styled.div`
 `
 
 const IconName = styled.h3`
-    font: ${theme.fonts.skillTag}
+    ${font({weight: theme.fonts.skillTag.weight, Fmax: theme.fonts.skillTag.size})};
+
 `

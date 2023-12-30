@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { theme } from "../../../../styles/Theme"
-import { FlexWrapper } from "../../../../components/FlexWrapper"
+import { font } from "../../../../styles/Common"
 
 export const DescriptionSection = () => {
     return (
@@ -26,32 +26,36 @@ const DescriptionBlock = styled.div`
     width: 100%;
 `
 const MainTitle = styled.h1`
-    font: ${theme.fonts.h1};
+    ${font({weight: theme.fonts.h1.weight, Fmax: theme.fonts.h1.size})};
+
     margin-bottom: 40px;
 `
 
 const NameTitle = styled.h2`
-    font: ${theme.fonts.name};
+    ${font({ weight: theme.fonts.name.weight, Fmax: theme.fonts.name.size})};
+
     margin-bottom: 8px;
 `
 
 const InfoTitle = styled.p`
     max-width: 336px;
     min-height: 129px;
-    font: ${theme.fonts.p};
+    ${font({ weight: theme.fonts.p.weight, Fmax: theme.fonts.p.size})};
     color: ${theme.colors.descFont};
     margin-bottom: 14px;
 
 `
 
 const ContactButton = styled.button`
-    width: 137px;
+    max-width: 137px;
     height: 47px;
+    width: 100%;
     border-radius: 6px;
     background: ${theme.colors.gradient};
     box-shadow: ${theme.colors.blueShadow};
     color: ${theme.colors.mainFont};
-    font: ${theme.fonts.button};
+    ${font({ weight: theme.fonts.button.weight, Fmax: theme.fonts.button.size})};
+
     &:hover{
         box-shadow: ${theme.colors.hoverShadow};
         background: ${theme.colors.hoverGradient};
