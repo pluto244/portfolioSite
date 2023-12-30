@@ -19,5 +19,9 @@ export const theme = {
         button: "400 18px sans-serif",
         skillTag: "300 24px sans-serif",
         h2: "400 48px 'Montserrat', sans-serif",
-    }
+    },
+    media:{
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)",
+    },
 }

@@ -22,10 +22,10 @@ export const FooterContacts = (props: FooterContactsPropsType) => {
 
                 {props.contacts.map((item, index) => {
                     return (
-                        <div key={index}>
+                        <StyledContact key={index}>
                             <span>{item.name}:</span>
                             <a href={item.seoTag}>{item.front} </a>
-                        </div>
+                        </StyledContact>
                     )
                 })}
             </FlexWrapper>
@@ -40,4 +40,10 @@ const Constacts = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;    
+`
+
+const StyledContact = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
 `

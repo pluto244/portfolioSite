@@ -25,7 +25,9 @@ export const HeaderMenu = (props: MenuPropsType) => {
 const StyledHeaderMenu = styled.nav`
     max-width: 775px;
     width: 100%;
-
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 `
 
 const List = styled.ul`
