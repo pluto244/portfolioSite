@@ -35,11 +35,28 @@ const StyledSkill = styled.div`
     height: 270px;
     border-radius: 29px;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.47);
+    margin: 10px;
+    @media ${theme.media.tablet} {
+        height: 230px;
+        width: 230px;
+    }
+    @media ${theme.media.mobile} {
+        height: 200px;
+        width: 200px;
+    }
 `
 
 const IconContainer = styled.div`
     padding-top: 56px;
     padding-bottom: 50px;
+    @media ${theme.media.tablet} {
+        padding-top: 46px;
+        padding-bottom: 40px;
+    }
+    @media ${theme.media.mobile} {
+        padding-top: 36px;
+        padding-bottom: 30px;
+    }
 `
 
 const IconName = styled.h3`

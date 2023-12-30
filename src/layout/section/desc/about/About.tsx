@@ -54,9 +54,21 @@ const ImageStyle = styled.div`
     :nth-child(3){
         z-index: 0;
         margin-left: 6px;
-
+        margin-top: 25%;
+        @media screen and (max-width: 969px) {
+            display: none;
+        }
     } 
-    
+    @media ${theme.media.tablet} {
+        width: 200px;
+        height: 200px;  
+        border-radius: 4px;
+        box-shadow: 0px 0px 0px 20px ${theme.colors.primaryBg};
+    }
+    @media ${theme.media.mobile} {
+        width: 120px;
+        height: 200px;  
+    }
 `
 
 const AboutImg = styled.img`    
@@ -64,6 +76,14 @@ const AboutImg = styled.img`
     height: 278px;
     object-fit: cover;
     box-shadow: 0px 0px 0px 6px ${theme.colors.secondaryBg};  
+    @media ${theme.media.tablet} {
+        width: 200px;
+        height: 200px;  
+    }
+    @media ${theme.media.mobile} {
+        width: 120px;
+        height: 200px;  
+    }
 `
 const TitleStyle = styled.h2`
     ${font({weight: theme.fonts.h2.weight, Fmax: theme.fonts.h2.size})};
@@ -80,6 +100,8 @@ const TextContainer = styled.div`
 const Text = styled.p`
     margin: 62px;
     ${font({weight: theme.fonts.p.weight, Fmax: theme.fonts.p.size})};
-
+    @media screen and (max-width: 969px) {
+        margin: 30px;
+    }
 `
 

@@ -4,8 +4,8 @@ import { Skill } from "./skill/Skill"
 
 export const Skills = () => {
     return (
-        <SkillsWrapper>
-            <FlexWrapper align="center" justify="space-between" >
+        <SkillsWrapper >
+            <FlexWrapper align="center" justify="center" wrap="wrap">
                 <Skill iconId="styledComp" iconName="Styled components" />
                 <Skill iconId="typeScript" iconName="TypeScript" />
                 <Skill iconId="react" iconName="React" />
